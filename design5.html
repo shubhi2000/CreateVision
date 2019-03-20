@@ -1,0 +1,66 @@
+<html>
+<head>
+	<script src="C:\Users\Shubhi\Downloads\p5.js"></script>
+	<script type="text/javascript">
+		function setup(){
+			createCanvas(1300,620);
+		}
+		function draw(){
+			background(219,192,192);
+			noStroke();
+			fill(255,0,0);
+			ellipse(300,250,30,30);
+			fill(250,120,0);
+			push();
+			translate(300,250);
+			rotate(frameCount/50);
+			for(i=1;i<7;i++){
+				ellipse(0,0+30*i,20,20);
+				ellipse(0,0-30*i,20,20);
+				ellipse(0+30*i,0,20,20);
+				ellipse(0-30*i,0,20,20);
+				ellipse(10+30/1.41*i,10+30/1.41*i,20,20);
+				ellipse(-10-30/1.41*i,10+30/1.41*i,20,20);
+				ellipse(10+30/1.41*i,-10-30/1.41*i,20,20);
+				ellipse(-10-30/1.41*i,-10-30/1.41*i,20,20);
+			}
+			pop();
+			fill(79);
+			ellipse(700,250,15,15);
+			push();
+			translate(700,250);
+			fill(254,0,195);
+			rotate(frameCount/100);
+			for(i=1;i<7;i++){
+				ellipse(0,0+20*i,10,10);
+				ellipse(0,0-20*i,10,10);
+				ellipse(0+20*i,0,10,10);
+				ellipse(0-20*i,0,10,10);
+				ellipse(10+20/1.41*i,10+20/1.41*i,10,10);
+				ellipse(-10-20/1.41*i,10+20/1.41*i,10,10);
+				ellipse(10+20/1.41*i,-10-20/1.41*i,10,10);
+				ellipse(-10-20/1.41*i,-10-20/1.41*i,10,10);
+			}
+			pop();
+			fill(193,109,139);
+			ellipse(1000,250,10,10);
+			push();
+			translate(1000,250);
+			fill(139,139,139);
+			rotate(frameCount/-100);
+			for(i=1;i<7;i++){
+				ellipse(0,0+10*i,5,5);
+				ellipse(0,0-10*i,5,5);
+				ellipse(0+10*i,0,5,5);
+				ellipse(0-10*i,0,5,5);
+				ellipse(10+10/1.41*i,10+10/1.41*i,5,5);
+				ellipse(-10-10/1.41*i,10+10/1.41*i,5,5);
+				ellipse(10+10/1.41*i,-10-10/1.41*i,5,5);
+				ellipse(-10-10/1.41*i,-10-10/1.41*i,5,5);
+			}
+			pop();
+		}
+	</script>
+</head>
+<body> </body>
+</html>

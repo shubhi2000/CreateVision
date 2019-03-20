@@ -1,0 +1,33 @@
+<html>
+<head>
+	<script src="C:\Users\Shubhi\Downloads\p5.js"></script>
+	<script type="text/javascript">
+		function setup(){
+			createCanvas(1300,620);
+			background(0);
+		}
+		function draw(){
+			push();
+			noStroke();
+			translate(600,300);
+			rotate(frameCount/100.0);
+			fill(120,250,120);
+			ellipse(0,0,350,350);
+			fill(120,120,250);
+			ellipse(0,0,210,210);
+			fill(250,120,120);
+			ellipse(0,0,100,100);
+			pop();
+			if (mouseX>=465 && mouseX<=735 && mouseY<=485 && mouseY>=115) {noFill();
+			    noStroke();
+			    ellipse(mouseX,mouseY,80,80);}
+			else{
+				stroke(255);
+				fill(250,120,120);
+				ellipse(mouseX,mouseY,80,80);
+			}
+		}
+	</script>
+</head>
+<body> </body>
+</html>
