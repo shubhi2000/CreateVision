@@ -1,198 +1,140 @@
 <html>
-<head>
-	<script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.5.0/p5.js"></script>
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.5.0/addons/p5.sound.js"></script>
-	<script type="text/javascript">
-
-	let s1=0, s2=0, s3=0, s4=0, s5=0, s6=0, s7=0, s8=0, s9=0;
-	let sounds = [];
-	let i;
-	function preload() {
-  		soundFormats('mp3');
-  		sounds.push(loadSound('tune1.mp3'));
-  		sounds.push(loadSound('tune2.mp3'));
-  		sounds.push(loadSound('tune3.mp3'));
-  		sounds.push(loadSound('tune4.mp3'));
-  		sounds.push(loadSound('tune5.mp3'));
-  		sounds.push(loadSound('tune6.mp3'));
-  		sounds.push(loadSound('tune7.mp3'));
-  		sounds.push(loadSound('tune8.mp3'));
-  		sounds.push(loadSound('tune9.mp3'));
-	}
-	function setup(){
-		let cnv = createCanvas(1300,1000);
-		fill(120,250,120);
-		ellipse(400,150,200,200);
-		fill(250,200,50);
-		ellipse(650,150,200,200);
-		fill(240,100,240);
-		ellipse(900,150,200,200);
-		fill(250,80,50);
-		ellipse(400,400,200,200);
-		fill(50,100,120);
-		ellipse(650,400,200,200);
-		fill(150,250,200);
-		ellipse(900,400,200,200);
-		fill(150,50,250);
-		ellipse(400,650,200,200);
-		fill(140,100,60);
-		ellipse(650,650,200,200);
-		fill(120,250,0);
-		ellipse(900,650,200,200);
-	}
-	function sound1Pressed(a) {
-		sounds[a].loop();
-		if (a==0) {
-			fill(200,200,200);
-			ellipse(400,150,200,200);
-		}
-		if (a==1) {
-			fill(200,200,200);
-			ellipse(650,150,200,200);
-		}
-		if (a==2) {
-			fill(200,200,200);
-			ellipse(900,150,200,200);
-		}
-		if (a==3) {
-			fill(200,200,200);
-			ellipse(400,400,200,200);
-		}
-		if (a==4) {
-			fill(200,200,200);
-			ellipse(650,400,200,200);
-		}
-		if (a==5) {
-			fill(200,200,200);
-			ellipse(900,400,200,200);
-		}
-		if (a==6) {
-			fill(200,200,200);
-			ellipse(400,650,200,200);
-		}
-		if (a==7) {
-			fill(200,200,200);
-			ellipse(650,650,200,200);
-		}
-		if (a==8) {
-			fill(200,200,200);
-			ellipse(900,650,200,200);
-		}
-	}
-	function sound1Pause(a) {
-		sounds[a].pause();
-		if (a==0) {
-			fill(120,250,120);
-			ellipse(400,150,200,200);
-		}
-		if (a==1) {
-			fill(250,200,50);
-			ellipse(650,150,200,200);
-		}
-		if (a==2) {
-			fill(240,100,240);
-			ellipse(900,150,200,200);
-		}
-		if (a==3) {
-			fill(250,80,50);
-			ellipse(400,400,200,200);
-		}
-		if (a==4) {
-			fill(50,100,120);
-			ellipse(650,400,200,200);
-		}
-		if (a==5) {
-			fill(150,250,200);
-			ellipse(900,400,200,200);
-		}
-		if (a==6) {
-			fill(150,50,250);
-			ellipse(400,650,200,200);
-		}
-		if (a==7) {
-			fill(140,100,60);
-			ellipse(650,650,200,200);
-		}
-		if (a==8) {
-			fill(120,250,0);
-			ellipse(900,650,200,200);
-		}
-	}
-	function mousePressed() {
-		let d1 = dist(mouseX, mouseY, 400,150);
-		let d2 = dist(mouseX, mouseY, 650, 150);
-		let d3 = dist(mouseX, mouseY, 900, 150);
-		let d4 = dist(mouseX, mouseY, 400, 400);
-		let d5 = dist(mouseX, mouseY, 650, 400);
-		let d6 = dist(mouseX, mouseY, 900, 400);
-		let d7 = dist(mouseX, mouseY, 400, 650);
-		let d8 = dist(mouseX, mouseY, 650, 650);
-		let d9 = dist(mouseX, mouseY, 900, 650);
-  		if (d1 < 100) {
-			i = 0;
-			if (s1===0) {s1=1;} 
-			else {s1=0;}
-			if (s1==1) {sound1Pressed(i);}
-			else {sound1Pause(i);}
-		}
-		if (d2 < 100) {
-			i = 1;
-			if (s2===0) {s2=1;} 
-			else {s2=0;}
-			if (s2==1) {sound1Pressed(i);}
-			else {sound1Pause(i);}
-		}
-		if (d3 < 100) {
-			i = 2;
-			if (s3===0) {s3=1;} 
-			else {s3=0;}
-			if (s3==1) {sound1Pressed(i);}
-			else {sound1Pause(i);}
-		}
-		if (d4 < 100) {
-			i = 3;
-			if (s4===0) {s4=1;} 
-			else {s4=0;}
-			if (s4==1) {sound1Pressed(i);}
-			else {sound1Pause(i);}
-		}
-  		if (d5 < 100) {
-			i = 4;
-			if (s5===0) {s5=1;} 
-			else {s5=0;}
-			if (s5==1) {sound1Pressed(i);}
-			else {sound1Pause(i);}
-		}
-		if (d6 < 100) {
-			i = 5;
-			if (s6===0) {s6=1;} 
-			else {s6=0;}
-			if (s6==1) {sound1Pressed(i);}
-			else {sound1Pause(i);}
-		}
-		if (d7 < 100) {
-			i = 6;
-			if (s7==0) {s7=1;} 
-			else {s7=0;}
-			if (s7==1) {sound1Pressed(i);}
-			else {sound1Pause(i);}
-		}
-		if (d8 < 100) {
-			i = 7;
-			if (s8===0) {s8=1;} 
-			else {s8=0;}
-			if (s8==1) {sound1Pressed(i);}
-			else {sound1Pause(i);}
-		}
-		if (d9 < 100) {
-			i = 8;
-			if (s9===0) {s9=1;} 
-			else {s9=0;}
-			if (s9==1) {sound1Pressed(i);}
-			else {sound1Pause(i);}
-		}
-	}
-	</script>
-</head>
-<body> </body>
+  <head>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.5.0/p5.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.5.0/addons/p5.sound.js"></script>
+    <script type="text/javascript">
+      let sounds = [];
+      function preload() {
+        soundFormats("mp3");
+        new Array(9).fill(0).forEach((i) => {
+          sounds.push({
+            state: false,
+            sound: loadSound(`tune${i + 1}.mp3`),
+          });
+        });
+      }
+      function setup() {
+        let cnv = createCanvas(1300, 1000);
+        fill(120, 250, 120);
+        ellipse(400, 150, 200, 200);
+        fill(250, 200, 50);
+        ellipse(650, 150, 200, 200);
+        fill(240, 100, 240);
+        ellipse(900, 150, 200, 200);
+        fill(250, 80, 50);
+        ellipse(400, 400, 200, 200);
+        fill(50, 100, 120);
+        ellipse(650, 400, 200, 200);
+        fill(150, 250, 200);
+        ellipse(900, 400, 200, 200);
+        fill(150, 50, 250);
+        ellipse(400, 650, 200, 200);
+        fill(140, 100, 60);
+        ellipse(650, 650, 200, 200);
+        fill(120, 250, 0);
+        ellipse(900, 650, 200, 200);
+      }
+      function sound1Pressed(a) {
+        sounds[a]["sound"].loop();
+        if (a == 0) {
+          fill(200, 200, 200);
+          ellipse(400, 150, 200, 200);
+        }
+        if (a == 1) {
+          fill(200, 200, 200);
+          ellipse(650, 150, 200, 200);
+        }
+        if (a == 2) {
+          fill(200, 200, 200);
+          ellipse(900, 150, 200, 200);
+        }
+        if (a == 3) {
+          fill(200, 200, 200);
+          ellipse(400, 400, 200, 200);
+        }
+        if (a == 4) {
+          fill(200, 200, 200);
+          ellipse(650, 400, 200, 200);
+        }
+        if (a == 5) {
+          fill(200, 200, 200);
+          ellipse(900, 400, 200, 200);
+        }
+        if (a == 6) {
+          fill(200, 200, 200);
+          ellipse(400, 650, 200, 200);
+        }
+        if (a == 7) {
+          fill(200, 200, 200);
+          ellipse(650, 650, 200, 200);
+        }
+        if (a == 8) {
+          fill(200, 200, 200);
+          ellipse(900, 650, 200, 200);
+        }
+      }
+      function sound1Pause(a) {
+        sounds[a]["sound"].pause();
+        if (a == 0) {
+          fill(120, 250, 120);
+          ellipse(400, 150, 200, 200);
+        }
+        if (a == 1) {
+          fill(250, 200, 50);
+          ellipse(650, 150, 200, 200);
+        }
+        if (a == 2) {
+          fill(240, 100, 240);
+          ellipse(900, 150, 200, 200);
+        }
+        if (a == 3) {
+          fill(250, 80, 50);
+          ellipse(400, 400, 200, 200);
+        }
+        if (a == 4) {
+          fill(50, 100, 120);
+          ellipse(650, 400, 200, 200);
+        }
+        if (a == 5) {
+          fill(150, 250, 200);
+          ellipse(900, 400, 200, 200);
+        }
+        if (a == 6) {
+          fill(150, 50, 250);
+          ellipse(400, 650, 200, 200);
+        }
+        if (a == 7) {
+          fill(140, 100, 60);
+          ellipse(650, 650, 200, 200);
+        }
+        if (a == 8) {
+          fill(120, 250, 0);
+          ellipse(900, 650, 200, 200);
+        }
+      }
+      function mousePressed() {
+        [
+          dist(mouseX, mouseY, 400, 150),
+          dist(mouseX, mouseY, 650, 150),
+          dist(mouseX, mouseY, 900, 150),
+          dist(mouseX, mouseY, 400, 400),
+          dist(mouseX, mouseY, 650, 400),
+          dist(mouseX, mouseY, 900, 400),
+          dist(mouseX, mouseY, 400, 650),
+          dist(mouseX, mouseY, 650, 650),
+          dist(mouseX, mouseY, 900, 650),
+        ].forEach((i, el) => {
+          if (i < 100) {
+            sounds[el].state != sounds[el].state;
+            if (sounds[el].state) {
+              sound1Pressed(el);
+            } else {
+              sound1Pause(el);
+            }
+          }
+        });
+      }
+    </script>
+  </head>
+  <body></body>
 </html>
